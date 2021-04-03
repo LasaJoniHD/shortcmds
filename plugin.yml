@@ -4,38 +4,38 @@ main: main.main
 
 commands:
    gamemode:
-      description: Der Spieler bekommt eine Narricht.
+      description: Du kannst dein und von anderen den Spielmodus verändern.
    gm:
-      description: Der Spieler bekommt eine Narricht.
+      description: Du kannst dein und von anderen den Spielmodus verändern.
    spielmodus:
-      description: Der Spieler bekommt eine Narricht.
+      description: Du kannst dein und von anderen den Spielmodus verändern.
    cmc:
-      description: Der Spieler bekommt eine Narricht.
+      description: Du kannst deinen Chat löschen.
    löschemeinenchat:
-      description: Der Spieler bekommt eine Narricht.
+      description: Du kannst deinen Chat löschen.
    heal:
-      description: Der Spieler bekommt eine Narricht.
+      description: Du kannst dich undandere heilen.
    heilen:
-      description: Der Spieler bekommt eine Narricht.
+      description: Du kannst dich und andere heilen.
    feed:
-      description: Der Spieler bekommt eine Narricht.
+      description: Du kannst dich und andere füttern.
    füttern:
-      description: Der Spieler bekommt eine Narricht.
+      description: Du kannst dich und andere füttern.
    playtime:
-      description: Der Spieler bekommt eine Narricht.
+      description: Du kannst deine und von anderen die Spielzeit sehen.
    spielzeit:
-      description: Der Spieler bekommt eine Narricht.
+      description: Du kannst deine und von anderen die Spielzeit sehen.
    clearmychat:
-      description: Der Spieler bekommt eine Narricht.
+      description: Du kannst deinen Chat löschen.
    töte:
-      description: Der Spieler bekommt eine Narricht.
+      description: Du kannst dich und andere umbringen.
    kill:
-      description: Der Spieler bekommt eine Narricht.
+      description: Du kannst dich und andere umbringen.
    createconfig:
-      description: Der Spieler bekommt eine Narricht.
+      description: Du kannst die Config erstellen oder resetten.
    fly:
-      description: Der Spieler bekommt eine Narricht.      
+      description: Du kannst fliegen.
    fliegen:
-      description: Der Spieler bekommt eine Narricht.  
+      description: Du kannst fliegen.
    shortcmds:
-      description: Der Spieler bekommt eine Narricht.           
+      description: Du bekommst Credits und Hilfe.    
