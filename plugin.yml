@@ -1,0 +1,41 @@
+name: ShortCMDS
+version: 1.1
+main: main.main
+
+commands:
+   gamemode:
+      description: Der Spieler bekommt eine Narricht.
+   gm:
+      description: Der Spieler bekommt eine Narricht.
+   spielmodus:
+      description: Der Spieler bekommt eine Narricht.
+   cmc:
+      description: Der Spieler bekommt eine Narricht.
+   löschemeinenchat:
+      description: Der Spieler bekommt eine Narricht.
+   heal:
+      description: Der Spieler bekommt eine Narricht.
+   heilen:
+      description: Der Spieler bekommt eine Narricht.
+   feed:
+      description: Der Spieler bekommt eine Narricht.
+   füttern:
+      description: Der Spieler bekommt eine Narricht.
+   playtime:
+      description: Der Spieler bekommt eine Narricht.
+   spielzeit:
+      description: Der Spieler bekommt eine Narricht.
+   clearmychat:
+      description: Der Spieler bekommt eine Narricht.
+   töte:
+      description: Der Spieler bekommt eine Narricht.
+   kill:
+      description: Der Spieler bekommt eine Narricht.
+   createconfig:
+      description: Der Spieler bekommt eine Narricht.
+   fly:
+      description: Der Spieler bekommt eine Narricht.      
+   fliegen:
+      description: Der Spieler bekommt eine Narricht.  
+   shortcmds:
+      description: Der Spieler bekommt eine Narricht.           
