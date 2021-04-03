@@ -1,1 +1,2 @@
 # ShortCMDS
+Download via releases
