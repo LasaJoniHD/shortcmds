@@ -1,0 +1,5 @@
+# Farbcodes &
+# [Player] = Player
+Messages:
+ JoinMessage: '[Player] hat den Server betreten!'
+ QuitMessage: '[Player] hat den Server verlassen!'
