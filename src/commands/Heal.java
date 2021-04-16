@@ -17,25 +17,26 @@ public class Heal implements CommandExecutor {
 				if (args.length == 0) {
 					p.setHealth(p.getMaxHealth());
 					p.setFoodLevel(20);
-					p.sendMessage("Du wurdest geheilt!");
+					p.sendMessage("§6Du wurdest geheilt!");
 				} else if (args.length == 1) {
 					if (Bukkit.getPlayer(args[0]) != null) {
-						final Player target = Bukkit.getPlayer(args[1]);
+						final Player target = Bukkit.getPlayer(args[0]);
 						target.setHealth(p.getMaxHealth());
 						target.setFoodLevel(20);
-						target.sendMessage("Du wurdest geheilt!");
+						target.sendMessage("§6Du wurdest geheilt!");
+						p.sendMessage("§6" + target.getName() + " §6wurde geheilt!");
 					} else {
-						p.sendMessage("Bitte gebe einen Spieler an!");
+						p.sendMessage("§6Bitte gebe einen Spieler an!");
 					}
 
 				} else {
-					p.sendMessage("Falsche Argumente!");
+					p.sendMessage("§4Falsche Argumente!");
 				}
 			} else {
-				p.sendMessage("Däfür hast du keine Rechte!");
+				p.sendMessage("§4Däfür hast du keine Rechte!");
 			}
 		} else {
-			sender.sendMessage("Dieser Kommand kann nur von einen Spieler ausgeführt werden!");
+			sender.sendMessage("§6Dieser Kommand kann nur von einen Spieler ausgeführt werden!");
 		}
 		return false;
 	}
