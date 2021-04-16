@@ -17,13 +17,15 @@ public class Playtime implements CommandExecutor {
 		} else if (p.hasPermission("shortcmds.playtimeall")) {
 			if (args.length == 1) {
 				if (Bukkit.getPlayer(args[0]) != null) {
-					final Player target = Bukkit.getPlayer(args[1]);
+					final Player target = Bukkit.getPlayer(args[0]);
 					printPlayerTime(target);
+				} else {
+					p.sendMessage("§6Bitte gebe einen Spieler an!");
 				}
 			} else if (args.length == 0) {
 				printPlayerTime(p);
 			} else {
-				p.sendMessage("Falsche Argumente!");
+				p.sendMessage("§4Falsche Argumente!");
 			}
 		}
 		return false;
@@ -35,8 +37,8 @@ public class Playtime implements CommandExecutor {
 		long TargetTimehour = TargetTime / 20 / 60 / 60;
 		long TargetTime2 = TargetTimehour * 20 * 60 * 60;
 		long TargetTimeminute = (TargetTime - TargetTime2) / 20 / 60;
-		p.sendMessage(p.getName() + "'s momentane Spielzeit beträgt " + TargetTimehour + " Stunden " + TargetTimeminute
-				+ " Minuten.");
+		p.sendMessage("§6" + p.getName() + "'s momentane Spielzeit beträgt " + TargetTimehour + " Stunden "
+				+ TargetTimeminute + " Minuten.");
 
 	}
 }

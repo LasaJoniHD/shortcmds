@@ -1,5 +1,11 @@
-# Farbcodes &
-# [Player] = Player
+# Farbcodes = &
+# Placeholders:
+# [Player] = Player (nur für JoinMessage & QuitMessage)
 Messages:
- JoinMessage: '[Player] hat den Server betreten!'
- QuitMessage: '[Player] hat den Server verlassen!'
+ JoinMessage: '§c[Player]§6 hat den Server betreten!'
+ QuitMessage: '§c[Player]§6 hat den Server verlassen!'
+ Broadcast: '§7[§4§lBroadcast§7]'
+ WrongPlayer: '§6Bitte gebe einen Spieler an!'
+ WrongArguments: '§4Falsche Argumente!'
+ NoPermission: '§4Däfür hast du keine Rechte!'
+ OnlyPlayer: '§6Dieser Kommand kann nur von einen Spieler ausgeführt werden!'

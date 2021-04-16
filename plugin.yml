@@ -1,41 +1,36 @@
 name: ShortCMDS
-version: 1.1
+version: 1.4
 main: main.main
 
 commands:
    gamemode:
       description: Du kannst dein und von anderen den Spielmodus verändern.
-   gm:
-      description: Du kannst dein und von anderen den Spielmodus verändern.
-   spielmodus:
-      description: Du kannst dein und von anderen den Spielmodus verändern.
+      aliases: [gm, spielmodus]
    cmc:
       description: Du kannst deinen Chat löschen.
-   löschemeinenchat:
-      description: Du kannst deinen Chat löschen.
+      aliases: [löschemeinenchat, clearmychat]
    heal:
       description: Du kannst dich undandere heilen.
-   heilen:
-      description: Du kannst dich und andere heilen.
+      aliases: [heilen]
    feed:
       description: Du kannst dich und andere füttern.
-   füttern:
-      description: Du kannst dich und andere füttern.
+      aliases: [füttern]
    playtime:
       description: Du kannst deine und von anderen die Spielzeit sehen.
-   spielzeit:
-      description: Du kannst deine und von anderen die Spielzeit sehen.
-   clearmychat:
-      description: Du kannst deinen Chat löschen.
-   töte:
-      description: Du kannst dich und andere umbringen.
+      aliases: [spielzeit]
    kill:
       description: Du kannst dich und andere umbringen.
+      aliases: [töte]
    createconfig:
       description: Du kannst die Config erstellen oder resetten.
    fly:
       description: Du kannst fliegen.
-   fliegen:
-      description: Du kannst fliegen.
+      aliases: [fliegen]
    shortcmds:
-      description: Du bekommst Credits und Hilfe.    
+      description: Du bekommst Credits und Hilfe.
+   broadcast:
+      description: Du kannst allen Spielern eine Nachricht schicken.
+      aliases: [rundruf, bc]
+   setdisplayname:
+      description: Du kannst dir oder einen anderen Spieler einen Displayname setzen.
+      aliases: [nick, nickname]
