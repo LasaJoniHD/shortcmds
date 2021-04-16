@@ -7,6 +7,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import commands.Broadcast;
 import commands.ClearMyChat;
 import commands.CreateConfig;
 import commands.Feed;
@@ -14,14 +15,17 @@ import commands.Fly;
 import commands.Heal;
 import commands.Info;
 import commands.Kill;
+import commands.Nick;
 import commands.Playtime;
 import commands.gamemode;
+import files.Playerdataconfigfile;
 import listener.JoinListener;
 
 public class main extends JavaPlugin implements Listener, CommandExecutor {
 
 	public static FileConfiguration config;
 	private static main plugin;
+	public static String version = "1.4";
 
 	@Override
 	public void onLoad() {
@@ -33,19 +37,12 @@ public class main extends JavaPlugin implements Listener, CommandExecutor {
 	@Override
 	public void onEnable() {
 
-		System.out.println(" ");
-		System.out.println(" ");
-		System.out.println("░██████╗██╗░░██╗░█████╗░██████╗░████████╗░█████╗░███╗░░░███╗██████╗░░██████╗");
-		System.out.println("██╔════╝██║░░██║██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗████╗░████║██╔══██╗██╔════╝");
-		System.out.println("╚█████╗░███████║██║░░██║██████╔╝░░░██║░░░██║░░╚═╝██╔████╔██║██║░░██║╚█████╗░");
-		System.out.println("░╚═══██╗██╔══██║██║░░██║██╔══██╗░░░██║░░░██║░░██╗██║╚██╔╝██║██║░░██║░╚═══██╗");
-		System.out.println("██████╔╝██║░░██║╚█████╔╝██║░░██║░░░██║░░░╚█████╔╝██║░╚═╝░██║██████╔╝██████╔╝");
-		System.out.println("╚═════╝░╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝░░░╚═╝░░░░╚════╝░╚═╝░░░░░╚═╝╚═════╝░╚═════╝░");
-		System.out.println(" ");
-		System.out.println(" ");
-		System.out.println("by LasaJoni");
-		System.out.println(" ");
+		ShortCMDSAnzeige(version);
 		System.out.println("ShortCMDS was started successful!");
+
+		Playerdataconfigfile.setup();
+		Playerdataconfigfile.get().options().copyDefaults(true);
+		Playerdataconfigfile.save();
 
 		PluginManager pluginmanager = Bukkit.getPluginManager();
 		pluginmanager.registerEvents(new JoinListener(), this);
@@ -54,29 +51,31 @@ public class main extends JavaPlugin implements Listener, CommandExecutor {
 		plugin = this;
 
 		getCommand("gamemode").setExecutor(new gamemode());
-		getCommand("gm").setExecutor(new gamemode());
-		getCommand("spielmodus").setExecutor(new gamemode());
 		getCommand("cmc").setExecutor(new ClearMyChat());
-		getCommand("clearmychat").setExecutor(new ClearMyChat());
-		getCommand("löschemeinenchat").setExecutor(new ClearMyChat());
 		getCommand("heal").setExecutor(new Heal());
-		getCommand("heilen").setExecutor(new Heal());
 		getCommand("feed").setExecutor(new Feed());
-		getCommand("füttern").setExecutor(new Feed());
 		getCommand("playtime").setExecutor(new Playtime());
-		getCommand("spielzeit").setExecutor(new Playtime());
 		getCommand("kill").setExecutor(new Kill());
-		getCommand("töte").setExecutor(new Kill());
 		getCommand("createconfig").setExecutor(new CreateConfig());
 		getCommand("fly").setExecutor(new Fly());
-		getCommand("fliegen").setExecutor(new Fly());
 		getCommand("shortcmds").setExecutor(new Info());
+		getCommand("broadcast").setExecutor(new Broadcast());
+		getCommand("setdisplayname").setExecutor(new Nick());
 
 	}
 
 	@Override
 	public void onDisable() {
 
+		ShortCMDSAnzeige(version);
+		System.out.println("ShortCMDS was disabled successful!");
+	}
+
+	public static main getPlugin() {
+		return plugin;
+	}
+
+	private void ShortCMDSAnzeige(String version) {
 		System.out.println(" ");
 		System.out.println(" ");
 		System.out.println("░██████╗██╗░░██╗░█████╗░██████╗░████████╗░█████╗░███╗░░░███╗██████╗░░██████╗");
@@ -88,12 +87,8 @@ public class main extends JavaPlugin implements Listener, CommandExecutor {
 		System.out.println(" ");
 		System.out.println(" ");
 		System.out.println("by LasaJoni");
+		System.out.println("Version: " + version);
 		System.out.println(" ");
-		System.out.println("ShortCMDS was disabled successful!");
-	}
-
-	public static main getPlugin() {
-		return plugin;
 	}
 
 }

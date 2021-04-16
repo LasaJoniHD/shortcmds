@@ -16,22 +16,22 @@ public class Kill implements CommandExecutor {
 			if (sender.hasPermission("shortcmds.kill")) {
 				if (args.length == 0) {
 					p.setHealth(0);
-					p.sendMessage("Du hast dich getötet!");
+					p.sendMessage("§6Du hast dich getötet!");
 				} else if (args.length == 1) {
 					if (Bukkit.getPlayer(args[0]) != null) {
-						final Player target = Bukkit.getPlayer(args[1]);
+						final Player target = Bukkit.getPlayer(args[0]);
 						target.setHealth(0);
-						target.sendMessage("Du wurdest von " + p.getName() + " getötet!");
-						p.sendMessage("Du hast erfolgreich " + target.getName() + " getötet!");
+						target.sendMessage("§6Du wurdest von " + p.getName() + " getötet!");
+						p.sendMessage("§6Du hast erfolgreich " + target.getName() + " getötet!");
 					} else {
-						p.sendMessage("Bitte gebe einen Spieler an!");
+						p.sendMessage("§6Bitte gebe einen Spieler an!");
 					}
 
 				} else {
-					p.sendMessage("Falsche Argumente!");
+					p.sendMessage("§4Falsche Argumente!");
 				}
 			} else {
-				sender.sendMessage("Dafür hast du keine Rechte!");
+				sender.sendMessage("§4Dafür hast du keine Rechte!");
 			}
 		}
 

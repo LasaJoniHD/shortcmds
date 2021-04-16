@@ -15,17 +15,17 @@ public class Fly implements CommandExecutor {
 				if (!p.getAllowFlight()) {
 					p.setAllowFlight(true);
 					p.setFlying(true);
-					p.sendMessage("Du kannst jetzt fliegen!");
+					p.sendMessage("§6Du kannst jetzt fliegen!");
 				} else {
 					p.setAllowFlight(false);
 					p.setFlying(false);
-					p.sendMessage("Du kannst jetzt nicht mehr fliegen!");
+					p.sendMessage("§6Du kannst jetzt nicht mehr fliegen!");
 				}
 			} else {
-				sender.sendMessage("Dieser Kommand kann nur von einen Spieler ausgeführt werden!");
+				sender.sendMessage("§6Dieser Kommand kann nur von einen Spieler ausgeführt werden!");
 			}
 		} else {
-			sender.sendMessage("Dafür hast du keine Rechte!");
+			sender.sendMessage("§4Däfür hast du keine Rechte!");
 		}
 		return false;
 	}
